@@ -13,19 +13,26 @@
  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
  <script>
+<script>
 function validateForm() {
-  var x = document.forms["myForm"]["stime"].value;
-  var d = new Date();
-
+  var x = document.forms["myForm"]["type"].value;
+  var y = document.forms["myForm"]["stime"].value;
+  var z = document.forms["myForm"]["etime"].value;
+  if(y>z)
+  {
+      alert("Invalid Start Time Or End Time");
+     return false;
+  }
   if (x == "")
   {
-      return true;
+     alert("Invalid Type of Leave");
+     return false;
   }
-  else if (x > d.getDate();) {
-    alert("Invalid Date");
-    return false;
+  else {
+    return true;
   }
 }
+</script>
 </script>
 <h2> Leave Reqests</h2>
 </head>
