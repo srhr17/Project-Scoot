@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+ <script>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["type"].value;
+  var y = document.forms["myForm"]["stime"].value;
+  var z = document.forms["myForm"]["etime"].value;
+  if(y>z)
+  {
+      alert("Invalid Start Time Or End Time");
+     return false;
+  }
+  if (x == "")
+  {
+     alert("Invalid Type of Leave");
+     return false;
+  }
+  else {
+    return true;
+  }
+}
+</script>
+</script>
+<h2> Leave Reqests</h2>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="width:10%">Index</th>
+    <th style="width:10%">Employee_id</th>
+    <th style="width:15%">Employee_Name</th>
+
+    <th style="width:20%">Start_time</th>
+    <th style="width:20%">End_time</th>
+    <th style="width:5%">Type</th>
+    <th style="width:5%">NO_of_leave_available</th>
+    <th style="width:20%">Accept/Deny</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>e1</td>
+            <td>e1</td>
+            <td>12-3-2020</td>
+            <td>13-3-2020</td>
+            <td>Medical</td>
+            <td>5</td>
+
+            <td>
+              <button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button>
+              <button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>e2</td>
+            <td>e2</td>
+            <td>12-3-2020</td>
+            <td>13-3-2020</td>
+            <td>Medical</td>
+            <td>5</td>
+            <td>
+              <button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button>
+              <button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+ 
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>e3</td>
+            <td>e3</td>
+            <td>12-3-2020</td>
+            <td>13-3-2020</td>
+            <td>Medical</td>
+            <td>5</td>
+            <td>
+              <button type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button>
+              <button type="button" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<h2>View History</h2>
+<div class="container">
+<form class="form-inline" name="myForm" action="" onsubmit="return validateForm()" method="post">
+    <div class="form-group">
+      <label for="emp">Employee_id:</label>
+      <input type="text" class="form-control" id="emp" placeholder="Enter Emp id" name="emp">
+    </div>
+    <div class="form-group">
+      <label for="stime">Start_time:</label>
+      <input type="date" class="form-control" id="stime"   name="stime">
+    </div>
+    <div class="form-group">
+      <label for="etime">End_time:</label>
+      <input type="date" class="form-control" id="etime"  name="etime">
+    </div>
+    <div class="form-group">
+      <label for="type">Type of Leave:</label>
+      <input type="text" class="form-control" id="type" placeholder="Type of leave" name="type">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+<h4> </h4>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="width:10%">Index</th>
+    <th style="width:10%">Employee_id</th>
+    <th style="width:15%">Employee_Name</th>
+
+    <th style="width:20%">Start_time</th>
+    <th style="width:20%">End_time</th>
+    <th style="width:5%">Type</th>
+    <th style="width:5%">NO_of_leave_available</th>
+    <th style="width:20%">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>e1</td>
+             <td>e1</td>
+            <td>12-3-2020</td>
+            <td>13-3-2020</td>
+            <td>Medical</td>
+            <td>5</td>
+            <td>Approved</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>e2</td>
+             <td>e2</td>
+            <td>12-3-2020</td>
+            <td>13-3-2020</td>
+            <td>Medical</td>
+            <td>5</td>
+            <td>Approved</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>e3</td>
+            <td>e3</td>
+            <td>12-3-2020</td>
+            <td>13-3-2020</td>
+            <td>Medical</td>
+            <td>5</td>
+            <td>Pending</td>
+
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div
+
+</body>
+</html>
