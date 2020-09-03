@@ -27,7 +27,9 @@
         <form name="addEmployee" onsubmit="return validateForm()">
           <div class="row justify-content-start" style="padding-top:50px;">
             <div class="col" style="padding-top:10px;">
-              <label>Name<span class="text-danger">*</span></label>
+              <label class="wanttitle"
+                >Name<span class="text-danger">*</span></label
+              >
             </div>
             <div class="col" style="padding-top:10px;">
               <input
@@ -43,7 +45,9 @@
 
           <div class="row justify-content-start" style="padding-top:10px;">
             <div class="col" style="padding-top:10px;">
-              <label>Department<span class="text-danger">*</span></label>
+              <label class="wanttitle"
+                >Department<span class="text-danger">*</span></label
+              >
             </div>
             <div class="col" style="padding-top:10px;">
               <select class="form-control" id="department" name="department">
@@ -62,7 +66,9 @@
 
           <div class="row justify-content-start" style="padding-top:10px;">
             <div class="col" style="padding-top:10px;">
-              <label>Designation<span class="text-danger">*</span></label>
+              <label class="wanttitle"
+                >Designation<span class="text-danger">*</span></label
+              >
             </div>
             <div class="col" style="padding-top:10px;">
               <select class="form-control" id="designation" name="designation">
@@ -81,7 +87,9 @@
 
           <div class="row justify-content-start" style="padding-top:10px;">
             <div class="col" style="padding-top:10px;">
-              <label>Age<span class="text-danger">*</span></label>
+              <label class="wanttitle"
+                >Age<span class="text-danger">*</span></label
+              >
             </div>
             <div class="col" style="padding-top:10px;">
               <input
@@ -96,12 +104,7 @@
 
           <div class="row justify-content-start" style="padding-top:10px;">
             <div class="col" style="padding-top:50px; padding-left:50%;">
-              <input
-                type="submit"
-                class="btn btn-primary"
-                value="Add Employee"
-              />
-
+              <button class="btn btn-primary">Add Employee</button>
               <button class="btn btn-primary">promote Employee</button>
             </div>
           </div>
@@ -127,6 +130,8 @@
           >
             <p id="demo"></p>
           </div>
+          <a href="profile.html">profile </a>
+          <a href="adminMessage.html">AdminMessage</a>
 
           <script>
             var cars =

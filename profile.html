@@ -36,20 +36,23 @@
           </div>
         </div>
         <div class="row justify-content-center" style="padding-top:50px;">
-          <div class="col" style="padding-top:10px;"></div>
           <div class="col" style="padding-top:10px;">
-            <button class="btn btn-primary">Edit Profile Picture</button>
+            <span class="wanttitle">Edit Profile Picture</span>
           </div>
+          <div class="col btn btn-primary" style="padding-top:10px;">
+            <input type="file" />
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
         </div>
 
         <!--         Name -->
 
         <div class="row justify-content-start" style="padding-top:10px;">
           <div class="col" style="padding-top:10px;">
-            <label>Name</label>
+            <label class="wanttitle">Name</label>
           </div>
           <div class="col" style="padding-top:10px;">
-            <label>name</label>
+            <input type="text" value="name" />
           </div>
           <div class="col" style="padding-top:10px;"></div>
         </div>
@@ -58,10 +61,10 @@
 
         <div class="row justify-content-start" style="padding-top:10px;">
           <div class="col" style="padding-top:10px;">
-            <label>Department</label>
+            <label class="wanttitle">Department</label>
           </div>
           <div class="col" style="padding-top:10px;">
-            <label>CS</label>
+            <label class="want">CS</label>
           </div>
           <div class="col" style="padding-top:10px;"></div>
         </div>
@@ -70,10 +73,10 @@
 
         <div class="row justify-content-start" style="padding-top:10px;">
           <div class="col" style="padding-top:10px;">
-            <label>Designation</label>
+            <label class="wanttitle">Designation</label>
           </div>
           <div class="col" style="padding-top:10px;">
-            <label>HoD</label>
+            <label class="want">HoD</label>
           </div>
           <div class="col" style="padding-top:10px;"></div>
         </div>
@@ -82,10 +85,29 @@
 
         <div class="row justify-content-start" style="padding-top:10px;">
           <div class="col" style="padding-top:10px;">
-            <label>Age</label>
+            <label class="wanttitle">Age</label>
           </div>
           <div class="col" style="padding-top:10px;">
-            <label>21</label>
+            <input type="number" value="21" />
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+        <!--         Password -->
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;">
+            <label class="wanttitle">Password</label>
+          </div>
+          <div class="col inputBox" style="padding-top:10px;">
+            <input
+              type="text"
+              placeholder="Create Password"
+              id="password"
+              readonly=""
+            />
+            <div id="btn" onclick="getPassword()">
+              Generate Password
+            </div>
           </div>
           <div class="col" style="padding-top:10px;"></div>
         </div>
@@ -93,8 +115,8 @@
         <div class="row justify-content-start" style="padding-top:10px;">
           <div class="col" style="padding-top:10px;"></div>
           <div class="col" style="padding-top:50px;">
-            <button class="btn btn-primary">
-              Reset Password
+            <button class="btn btn-primary" onclick="resetProfile()">
+              Reset
             </button>
           </div>
         </div>
