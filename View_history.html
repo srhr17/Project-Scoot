@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<style>
+container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+</style>
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<body>
+<div class="bg-gray-300 h-screen">
+<h2  class=" px-5 pb-1 pt-4 inline-block align-top justify-center"> Leave History</h2>
+<div class="container mb-8">
+<form class="form-inline">
+  <div class="flex flex-wrap">
+    <div class="form-group">
+      <label for="grid-first-name">
+         Employee Id
+      </label>
+   <input class=" bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 " id="grid-last-name" type="text" placeholder="Employee Id">
+    </div>
+    <div class="form-group">
+      <label  for="grid-last-name">
+         Start Time
+      </label>
+   <input class=" bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 " id="grid-last-name" type="date" placeholder="Start Time">
+    </div>
+    <div class="form-group">
+      <label  for="grid-last-name">
+         End Time
+      </label>
+   <input class=" bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 " id="grid-last-name" type="date" placeholder="End Time">
+    </div>
+    <div class="form-group">
+      <label  for="grid-last-name">
+        Type Of Leave
+      </label>
+   <input class=" bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 " id="grid-last-name" type="text" placeholder="Type Of leave">
+    </div>
+     <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline  text-white font-bold py-2 px-10 rounded" type="button">
+         Submit
+      </button>
+</form>
+</div>
+<div id="app" class="mt-8 bg-gray-300  flex justify-center items-center">
+
+<div class="shadow-2xl bg-white rounded">
+
+<table class="table-fixed">
+  <thead>
+          <tr>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize" >Index</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">Employee id</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize" >Employee Name</th>
+
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">Start time</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">End time</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">Type</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">Available Leave</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">Status</th>
+    <th class="px-4 pb-1 pt-4 font-bold text-gray-700 capitalize">More</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="font-medium border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">1</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e1</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e1</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-3-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-3-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Medical</td>
+            <td class="p-4 text-gray-800 bg-white rounded">5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Approved</td>
+            
+            <td  class="p-4 text-gray-800 bg-white rounded"><button type="button"><i class="fa fa-file" aria-hidden="true"></i></button></td>
+          </tr>
+          <tr class="border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">2</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e2</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e2</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-3-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-3-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Medical</td>
+            <td class="p-4 text-gray-800 bg-white rounded">5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Approved</td>
+            
+            <td  class="p-4 text-gray-800 bg-white rounded"><button type="button"><i class="fa fa-file" aria-hidden="true"></i></button></td>
+          </tr>
+          <tr class="border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">3</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e3</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e3</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-3-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-3-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Medical</td>
+            <td class="p-4 text-gray-800 bg-white rounded">5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Approved</td>
+            
+            <td  class="p-4 text-gray-800 bg-white rounded"><button type="button"><i class="fa fa-file" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr class="border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">4</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e4</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e4</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-4-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-4-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Ordinary</td>
+            <td class="p-4 text-gray-800 bg-white rounded">5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Approved</td>
+            
+          </tr>
+
+          <tr class="border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">5</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-5-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-5-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Medical</td>
+            <td class="p-4 text-gray-800 bg-white rounded">5</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Denied</td>
+            
+            <td  class="p-4 text-gray-800 bg-white rounded"><button type="button"><i class="fa fa-file" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr class="border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">6</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e6</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e6</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-6-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-6-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Medical</td>
+            <td class="p-4 text-gray-800 bg-white rounded">2</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Approved</td>
+            
+            <td  class="p-4 text-gray-800 bg-white rounded"><button type="button"><i class="fa fa-file" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr class="border-t border-gray-200">
+            <th class="p-4 text-gray-800 bg-white rounded">7</th>
+            <td class="p-4 text-gray-800 bg-white rounded">e7</td>
+            <td class="p-4 text-gray-800 bg-white rounded">e7</td>
+            <td class="p-4 text-gray-800 bg-white rounded">12-7-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">13-7-2020</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Medical</td>
+            <td class="p-4 text-gray-800 bg-white rounded">7</td>
+            <td class="p-4 text-gray-800 bg-white rounded">Approved</td>
+            
+            <td  class="p-4 text-gray-800 bg-white rounded"><button type="button"><i class="fa fa-file" aria-hidden="true"></i></button></td>
+          </tr>
+          </tr>
+        </tbody>
+</table>
+
+<div class=" pt-8 flex justify-center items-center p-3">
+      <div class="flex justify-center items-center rounded w-8 h-8 bg-indigo-200 ml-1 text-gray-500">
+        <<
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8 bg-indigo-200 ml-1 text-gray-500"
+      >
+        <
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8  ml-1 text-gray-700"
+      >
+        1
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8  ml-1 text-gray-700"
+      >
+        2
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8 bg-indigo-500 ml-1 text-gray-100"
+      >
+        3
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8  ml-1 text-gray-700"
+      >
+        4
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8  ml-1 text-gray-700"
+      >
+        5
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8 bg-indigo-200 ml-1 text-gray-500"
+      >
+        >
+      </div>
+      <div
+        class="flex justify-center items-center rounded w-8 h-8 bg-indigo-200 ml-1 text-gray-500"
+      >
+        >>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
