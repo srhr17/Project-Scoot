@@ -21,7 +21,8 @@ function myFunction() {
 
   }
 
-Filevalidation = () => { 
+
+function Filevalidation() { 
     const fi = document.getElementById('file'); 
     if (fi.files.length > 0) { 
         for (const i = 0; i <= (fi.files.length - 1); i++) { 
@@ -36,6 +37,5 @@ Filevalidation = () => {
         } 
     } 
 } 
-
 
 
