@@ -1,0 +1,120 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="dashboard.css" />
+</head>
+<div>Welcome to your Dashboard</div>
+<br />
+<div class="container">
+  <div onclick="applyLeave()">
+    Apply Leave
+  </div>
+  <div onclick="leaveHistory()">
+    Leave History
+  </div>
+  <div onclick="leaveRequests()" id="leaveReq"></div>
+  <div onclick="profileEdit()">
+    Profile Edit
+  </div>
+  <div onclick="contactAdmin()">
+    Contact Admin
+  </div>
+  <br />
+  <div class="sidebar">
+    <div class="profile">
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <!--       <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div>
+      <div class="field">
+        <label for="name">Name :</label>
+        <label id="name">Name</label>
+      </div> -->
+    </div>
+  </div>
+  <div class="history">
+    <div class="heading">
+      <h4>S.No</h4>
+      <h4>Reason</h4>
+      <h4>Start Time</h4>
+      <h4>End Time</h4>
+      <h4>Status</h4>
+    </div>
+
+    <script>
+      for (var x = 1; x < 7; x++) {
+        document.write(
+          '<div class="items">\
+            <h5>S.No</h5>\
+            <p>Reason</p>\
+            <h5>Start Time</h5>\
+            <h5>End Time</h5>\
+            <h5>Status</h5>\
+        </div>'
+        );
+      }
+
+      function applyLeave() {
+        window.location.href =
+          "https://second-omniscient-sunscreen.glitch.me/applyLeave.html";
+      }
+
+      function leaveHistory() {
+        window.location.href =
+          "https://second-omniscient-sunscreen.glitch.me/View_history.html";
+      }
+      function profileEdit() {
+        window.location.href =
+          "https://second-omniscient-sunscreen.glitch.me/profileEdit.html";
+      }
+      function contactAdmin() {
+        window.location.href =
+          "https://second-omniscient-sunscreen.glitch.me/contactAdmin.html";
+      }
+
+      function leaveRequests() {
+        window.location.href =
+          "https://second-omniscient-sunscreen.glitch.me/Leave_Requests.html";
+      }
+
+      var x = localStorage.getItem("userType");
+      if (x == "student") {
+      } else {
+        document.getElementById("leaveReq").innerHTML = "Leave Requests";
+      }
+      //retrieve
+    </script>
+  </div>
+</div>

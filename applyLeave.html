@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="applyLeave.css" />
+    <script type="text/javascript" src="applyLeave.js"></script>
+    <title>Leave Page</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="#" onsubmit="alert('Successfully Submitted');">
+        <div class="row">
+          <div class="col-25">
+            <label class="required font" for="fromDate">From Date & Time</label>
+          </div>
+          <div class="col-75">
+            <input required type="date" id="fromDate" />
+            <input required type="time" id="fromTime" /><br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="required font" for="toDate">To Date & Time</label>
+          </div>
+          <div class="col-75">
+            <input required type="date" id="toDate" />
+            <input required type="time" id="toTime" /><br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="required font" for="leavetype"
+              >Select Leave Type</label
+            >
+          </div>
+          <div class="col-75">
+            <select id="leavetype" name="leave" required>
+              <option value="">None</option>
+              <option value="medical">Medical</option>
+              <option value="personal">Personal</option> </select
+            ><br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="required font" for="reason">Add Reason</label>
+          </div>
+          <div class="col-75">
+            <textarea
+              required
+              id="addreason"
+              name="subject"
+              placeholder="Write.."
+              style="height:100px"
+            ></textarea
+            ><br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="required font" for="uploadfile">Upload File</label>
+          </div>
+          <div class="col-75">
+            <input
+              required
+              type="file"
+              name="file"
+              id="file"
+              onchange="Filevalidation()"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit" onclick="myFunction()" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

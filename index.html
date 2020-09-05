@@ -1,149 +1,57 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
   <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Add/Promote Employee</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous"
-    />
-
-    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css" type="text/css" />
   </head>
-  <body>
-    <div class="container body-content">
+  <body onload="document.login.userid.focus();">
+    <script src="login.js"></script>
+
+    <h2>LOGIN</h2>
+
+    <form name="login" onSubmit="return Validation();">
+      <div class="imgcontainer">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmP0fldhEnhGHPzqjuSbQb5zm1d3X8IbeXUQ&usqp=CAU"
+          alt="image"
+          class="image"
+        />
+      </div>
+
       <div class="container">
-        <div class="row justify-content-center" style="padding-top:10px;">
-          <h1>
-            Add/Promote an Employee
-          </h1>
-        </div>
+        <label for="userid"><b>UserID</b></label>
+        <input type="text" placeholder="Enter UserID" name="userid" required />
 
-        <!--         Name -->
-        <form name="addEmployee" onsubmit="return validateForm()">
-          <div class="row justify-content-start" style="padding-top:50px;">
-            <div class="col" style="padding-top:10px;">
-              <label class="wanttitle"
-                >Name<span class="text-danger">*</span></label
-              >
-            </div>
-            <div class="col" style="padding-top:10px;">
-              <input
-                placeholder="Enter the name "
-                class="form-control name"
-                name="name"
-                pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$"
-              />
-            </div>
-          </div>
+        <label for="passid"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="passid"
+          required
+        />
+        <label for="select">Select:</label>
+        <select name="select" id="select">
+          <option selected="" value="Default">choose option:</option>
+          <option value="admin">Admin</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+        </select>
+        <center>
+          <label><input type="submit" name="submit" value="Submit"/></label>
+        </center>
 
-          <!--         Department -->
-
-          <div class="row justify-content-start" style="padding-top:10px;">
-            <div class="col" style="padding-top:10px;">
-              <label class="wanttitle"
-                >Department<span class="text-danger">*</span></label
-              >
-            </div>
-            <div class="col" style="padding-top:10px;">
-              <select class="form-control" id="department" name="department">
-                <option value="" selected disabled hidden
-                  >Choose the department here</option
-                >
-                <option value="CS">Computer Science</option>
-                <option value="EC">Electronics</option>
-                <option value="EE">Electrical</option>
-                <option value="MC">Mechanical</option>
-              </select>
-            </div>
-          </div>
-
-          <!--         Designation -->
-
-          <div class="row justify-content-start" style="padding-top:10px;">
-            <div class="col" style="padding-top:10px;">
-              <label class="wanttitle"
-                >Designation<span class="text-danger">*</span></label
-              >
-            </div>
-            <div class="col" style="padding-top:10px;">
-              <select class="form-control" id="designation" name="designation">
-                <option value="" selected disabled hidden
-                  >Choose the designation here</option
-                >
-                <option value="hod">HoD</option>
-                <option value="associate">Associate</option>
-                <option value="assistant">Assistant</option>
-                <option value="intern">Intern</option>
-              </select>
-            </div>
-          </div>
-
-          <!--         Age -->
-
-          <div class="row justify-content-start" style="padding-top:10px;">
-            <div class="col" style="padding-top:10px;">
-              <label class="wanttitle"
-                >Age<span class="text-danger">*</span></label
-              >
-            </div>
-            <div class="col" style="padding-top:10px;">
-              <input
-                placeholder="Enter the age"
-                type="number"
-                name="age"
-                class="form-control age"
-                min="1"
-              />
-            </div>
-          </div>
-
-          <div class="row justify-content-start" style="padding-top:10px;">
-            <div class="col" style="padding-top:50px; padding-left:50%;">
-              <button class="btn btn-primary">Add Employee</button>
-              <button class="btn btn-primary">promote Employee</button>
-            </div>
-          </div>
-        </form>
-        <label>(<span class="text-danger">*</span>) Mandatory Fields</label>
-
-        <hr />
-
-        <div class="row justify-content-start">
-          <div
-            class="row justify-content-center"
-            style="padding-top:10px;padding-left:30%;"
-          >
-            <h3>
-              Employees Added/Promoted by you
-            </h3>
-          </div>
-          <div
-            class="alert alert-secondary"
-            style="padding-top:10px;height:120px;width:100%;overflow:auto;"
-            role="alert"
-            id="employeelist"
-          >
-            <p id="demo"></p>
-          </div>
-          <a href="profile.html">profile </a>
-          <a href="adminMessage.html">AdminMessage</a>
-
-          <script>
-            var cars =
-              '<div class="toast-header"><strong class="mr-auto">Employee Name</strong><small>11 mins ago</small></div><div class="toast-body">Desgination</div></div><hr>';
-            var i, len, text;
-            for (i = 0, len = 5, text = ""; i < len; i++) {
-              text += cars + "<br>";
-            }
-            document.getElementById("demo").innerHTML = text;
-          </script>
+        <div>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
         </div>
       </div>
-    </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
+    </form>
   </body>
 </html>
