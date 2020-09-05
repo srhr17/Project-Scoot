@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Admin dashboard</title>
+    <link rel='stylesheet' href='admin_dashboard.css' type='text/css' />
+    <script src="admin_dashboard.js"></script>
+  </head>
+
+  <body onload="document.assign.id.focus();">
+    <h1>Admin Dashboard</h1>
+    <form name='assign' onSubmit="return Validation();">
+      <ul>
+        <li><label for="id">Faculty id:</label></li>
+        <li><input type="text" name="id" size="12" /></li>
+        <li><label for="name">Name:</label></li>
+        <li><input type="text" name="name" size="50" /></li>
+        <li><label for="dept">Department:</label></li>
+        <li><select name="dept">
+            <option selected="" value="Default">(Please select a option)</option>
+            <option value="AF">CSE</option>
+            <option value="AD">ECE</option>
+            <option value="AD">MEE</option>
+            <option value="AL">BIO</option>
+        </select></li>
+ 
+        <li><label for="email">Email:</label></li>
+        <li><input type="text" name="email" size="50" /></li>
+         <li><label for="section">section:</label></li>
+        <li><select name="section">
+            <option selected="" value="Default">(Please select a option)</option>
+            <option value="AF">A</option>
+            <option value="AD">B</option>
+            <option value="AD">C</option>
+            <option value="AL">D</option>
+        </select></li>
+        	<li><label for="assign">assign:</label></li>
+        <li><select name="assign">
+            <option selected="" value="Default">(Please select a option)</option>
+            <option value="AF">Permanent</option>
+            <option value="AD">Temporary</option>
+        </select></li>
+        <li><input type="submit" name="Add faculty" value="Add Faculty" /></li>
+        <li> <input type="submit" value="Promote Faculty" name="promote"></li>
+      </ul>
+    </form>
+  </body>
+
+</html>
