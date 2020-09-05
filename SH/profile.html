@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add/Promote Employee</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container body-content">
+      <div class="container">
+        <div class="row justify-content-center" style="padding-top:10px;">
+          <h1>
+            Profile
+          </h1>
+        </div>
+
+        <!--         ProfilePicture -->
+
+        <div class="row justify-content-center" style="padding-top:50px;">
+          <div class="col" style="padding-top:10px;"></div>
+          <div class="col" style="padding-top:10px;">
+            <img
+              src="https://rb.gy/ohf1r5"
+              style="height:200px;width:200px;"
+              alt="profileImage"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center" style="padding-top:50px;">
+          <div class="col" style="padding-top:10px;">
+            <span class="wanttitle">Edit Profile Picture</span>
+          </div>
+          <div class="col btn btn-primary" style="padding-top:10px;">
+            <input type="file" />
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+
+        <!--         Name -->
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;">
+            <label class="wanttitle">Name</label>
+          </div>
+          <div class="col" style="padding-top:10px;">
+            <input type="text" value="name" />
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+
+        <!--         Department -->
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;">
+            <label class="wanttitle">Department</label>
+          </div>
+          <div class="col" style="padding-top:10px;">
+            <label class="want">CS</label>
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+
+        <!--         Designation -->
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;">
+            <label class="wanttitle">Designation</label>
+          </div>
+          <div class="col" style="padding-top:10px;">
+            <label class="want">HoD</label>
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+
+        <!--         Age -->
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;">
+            <label class="wanttitle">Age</label>
+          </div>
+          <div class="col" style="padding-top:10px;">
+            <input type="number" value="21" />
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+        <!--         Password -->
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;">
+            <label class="wanttitle">Password</label>
+          </div>
+          <div class="col inputBox" style="padding-top:10px;">
+            <input
+              type="text"
+              placeholder="Create Password"
+              id="password"
+              readonly=""
+            />
+            <div id="btn" onclick="getPassword()">
+              Generate Password
+            </div>
+          </div>
+          <div class="col" style="padding-top:10px;"></div>
+        </div>
+
+        <div class="row justify-content-start" style="padding-top:10px;">
+          <div class="col" style="padding-top:10px;"></div>
+          <div class="col" style="padding-top:50px;">
+            <button class="btn btn-primary" onclick="resetProfile()">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
