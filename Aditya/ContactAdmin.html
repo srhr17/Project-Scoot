@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ContactAdminCss.css">
+    <script type="text/javascript" src="ContactAdminJs.js"></script>
+    <title>Contact Admin</title>
+</head>
+  
+<body style="background-color:#92A8D1;">
+
+        <div class="container">
+            <div style="text-align:center">
+                <h2>Contact Admin</h2>
+              </div>
+            <form action="#" onSubmit="alert('Successfully Submitted');">  
+            <div class="row"> 
+              <div class="col-25">
+                <label class="required font" for="name">Name</label>
+              </div>
+              <div class="col-75" >
+                <input required type="text" id="name" name="name" placeholder="Enter name.."><br><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label class="required font" for="id">Id</label>
+              </div>
+              <div class="col-75">
+                <input required type="text" id="id" name="id" pattern="[a-z]+\.[a-z]+\.[a-z0-9]+.[a-z0-9]$" placeholder="Enter id.."><br><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label class="required font" for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input required type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter email.."><br><br>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label class="required font" for="mobile">Mobile</label>
+                </div>
+                <div class="col-75">
+                  <input required type="text" id="mobile" name="mobile" placeholder="Enter moblie number.."><br><br>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <label class="required font" for="reason">Reason</label>
+              </div>
+              <div class="col-75">
+                <textarea required id="subject" name="subject" placeholder="Write.." style="height:100px"></textarea><br><br>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label class="font" for="uploadfile">Upload File</label>
+                </div>
+                <div class="col-75">
+                    <input type="file" name="file" id="file"/>
+                </div>
+              </div>
+            <div class="row">
+              <input type="submit" value="Submit" onclick="validate()">
+            </div>
+            
+            </form>
+          
+          </div>
+
+</body>
+</html>
