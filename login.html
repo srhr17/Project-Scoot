@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LOGIN</title>
+    <link rel='stylesheet' href='login.css' type='text/css' />
+ 
+  </head>
+   <body onload="document.login.userid.focus();">
+      <script src="login.js"></script>
+
+<h2>LOGIN</h2>
+
+ <form name='login' onSubmit="return Validation();">
+  <div class="imgcontainer">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmP0fldhEnhGHPzqjuSbQb5zm1d3X8IbeXUQ&usqp=CAU" alt="image" class="image">
+  </div>
+
+  <div class="container">
+    <label for="userid" ><b>UserID</b></label>
+    <input type="text" placeholder="Enter UserID" name="userid" required >
+
+    <label for="passid"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="passid" required>
+    <center>   
+    <label><input type="submit" name="submit" value="Submit" /></label>
+    </center> 
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+</form>
+
+  </body>
+</html>
